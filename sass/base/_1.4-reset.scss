@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $font-stack;
+    line-height: 1.6;
+    @include set-bg-color($black);
+}
+
+section:not(.hero) {
+    padding: 5.6rem 0 8rem 0;
+    text-align: center;
+
+    @include media('pc') {
+        padding: 9rem 0;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-stack-2;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+img {
+    max-width: 100%;
+}

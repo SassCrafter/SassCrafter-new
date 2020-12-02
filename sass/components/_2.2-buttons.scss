@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    //@include set-bg-color($white);
+    background-color: $white;
+    color: $black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    font-family: $font-stack-2;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    margin: 1rem 0 1.5rem 0;
+    transition:  color $t-time linear, background-color $t-time linear;
+    
+
+
+    &:hover {
+        background-color: $main-color;
+        color: $white;
+    }
+
+    
+}

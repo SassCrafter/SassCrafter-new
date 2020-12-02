@@ -1,0 +1,69 @@
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+// Text
+
+.text-center {
+    width: 100%;
+    max-width: 80rem;
+    @include absolute;
+    z-index: 5;
+    text-align: center;
+}
+
+.large {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.heading {
+    font-size: 3.4rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: .3rem;
+}
+
+.text-gray {
+    color: $gray;
+    font-size: 1.4rem;
+}
+
+.bg-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    height: 100%;
+    margin: auto;
+}
+
+
+
+.line {
+    display: inline-block;
+    padding-bottom: 1.5rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 50%;
+        height: .2rem;
+        background: $main-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+

@@ -1,0 +1,66 @@
+// Set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 60) {
+        @return $black;
+    }
+    @else {
+        @return $white;
+    }
+}
+
+// Set bg color
+@mixin set-bg-color($color) {
+    background: $color;
+    color: set-text-color($color);
+}
+
+// Set bg img
+@mixin set-bg-img($path) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+@mixin absolute($top: 50%, $left: 50%) {
+    position: absolute;
+    top: $top;
+    left: $left;
+
+    @if ($top == 50% and $left == 50%) {
+        transform: translate(-50%, -50%);
+    }
+    @if ($top == 50% and $left != 50%) {
+        transform: translateY(-50%);
+    }
+    @if ($top != 50% and $left == 50%) {
+        transform: translateX(-50%);
+    }
+}
+
+@mixin t($property: transform, $duration: $t-time, $timing: $t-timing, $delay: 0ms) {
+    transition: $property $duration $timing $delay;
+}
+
+@mixin flex($height: 100%, $direction:row, $align:center, $justify:center) {
+    height: $height;
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+
+@mixin media($size) {
+    @if ($size == 'tablet') {
+        @media screen and (min-width: $tablet) {
+            @content;
+        }
+    }
+    @if ($size == 'pc') {
+        @media screen and (min-width: $pc) {
+            @content;
+        }
+    }
+}
