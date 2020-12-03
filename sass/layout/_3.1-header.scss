@@ -4,9 +4,23 @@
     height: $header-height;
     background: transparent;
     z-index: 1000;
+    transition: height $t-time ease-in-out, background-color $t-time linear;
 
     &-content {
         @include flex(100%, row, center, space-between);
+    }
+
+    &-scrolled {
+        height: $header-height - 20px;
+        background: $black;
+    }
+
+    @include media('tablet') {
+        height: 100px;
+
+        &-scrolled {
+            height: 80px;
+        }
     }
 }
 
@@ -80,6 +94,22 @@
         }
         
 
+    }
+
+    @include media('tablet') {
+        &-list {
+            a {
+                font-size: 3rem;
+            }
+        }
+    }
+    @include media('pc') {
+        &-list {
+            a {
+                font-size: 5rem;
+                letter-spacing: .5rem;
+            }
+        }
     }
 }
 

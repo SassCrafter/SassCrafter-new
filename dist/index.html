@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="./css/main.css">
     <title>SassCrafter | Home</title>
 </head>
@@ -45,13 +47,13 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id='home'>
         <div class="bg-parallax hero-bg">
             <div class="container hero-content">
                 <div class="text-center">
                     <h4 class="subheading">I am dima</h3>
                     <h1 class="large">I'm creating stunning websites</h1>
-                    <a href="#about" class="btn">resent works</a>
+                    <a href="#projects" class="btn">resent works</a>
                 </div>
             </div>
         </div>
@@ -59,11 +61,11 @@
 
     <section class="about" id='about'>
         <div class="container about-container">
-            <div class="about-img-container">
-                <img src="./img/about/about-1.jpeg" alt="" class="about-img about-img-1">
+            <div class="about-img-container" data-aos="zoom-out-right" data-aos-offset="500" data-aos-duration="500">
+                <img src="./img/about/about-1.jpeg" alt="" class="about-img parallax about-img-1">
                 <img src="./img/about/about-2.jpeg" alt="" class="about-img about-img-2">
             </div>
-            <div class="about-content">
+            <div class="about-content text">
                 <h4 class="subheading">crafted with love</h4>
                 <h2 class="heading line line-left">stunning design</h2>
                 <p class="text-gray">Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula.</p>
@@ -71,7 +73,115 @@
         </div>
     </section>
 
+    <section class='quote s-bg' data-aos='fade-up'>
+        <div class="container">
+            <div class="text">
+                <h4 class="subheading">carefully crafted websites</h4>
+                <h3 class='qoute-text'>"A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away"</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="work" id="projects">
+        <div class="container">
+            <div class="text">
+                <h4 class="subheading">featured case studies</h4>
+                <h2 class="heading line line-center">Some of My Work</h2>
+            </div>
+            <div class="work-content">
+                <div class="work-card work-card-big" data-aos="zoom-in-up">
+                    <div class="work-card-top">
+                        <a href="#">
+                            <img src="./img/work/1.jpeg" class="work-card-cover" alt="">
+                        </a>
+                        <div class="work-card-circle">
+                            <img src="./img/icons/plus-icon.svg" alt="" class="circle-icon">
+                        </div>
+                    </div>
+                    <div class="work-card-bottom">
+                        <span class="work-card-tag">website</span>
+                        <a href="#"><h5 class="work-card-title">Photographer</h5></a>
+                    </div>
+                </div>
+                <div class="work-card work-card-medium" data-aos="zoom-in-up">
+                    <div class="work-card-top">
+                        <a href="#">
+                            <img src="./img/work/2.jpeg" class="work-card-cover" alt="">
+                        </a>
+                        <div class="work-card-circle">
+                            <img src="./img/icons/plus-icon.svg" alt="" class="circle-icon">
+                        </div>
+                    </div>
+                    <div class="work-card-bottom">
+                        <span class="work-card-tag">website</span>
+                        <a href="#"><h5 class="work-card-title">Photographer</h5></a>
+                    </div>
+                </div>
+                <div class="work-card work-card-small" data-aos="zoom-in-up">
+                    <div class="work-card-top">
+                        <a href="#">
+                            <img src="./img/work/3.jpeg" class="work-card-cover" alt="">
+                        </a>
+                        <div class="work-card-circle">
+                            <img src="./img/icons/plus-icon.svg" alt="" class="circle-icon">
+                        </div>
+                    </div>
+                    <div class="work-card-bottom">
+                        <span class="work-card-tag">website</span>
+                        <a href="#"><h5 class="work-card-title">Photographer</h5></a>
+                    </div>
+                </div>
+                <div class="work-card work-card-big" data-aos="zoom-in-up">
+                    <div class="work-card-top">
+                        <a href="#">
+                            <img src="./img/work/4.jpeg" class="work-card-cover" alt="">
+                        </a>
+                        <div class="work-card-circle">
+                            <img src="./img/icons/plus-icon.svg" alt="" class="circle-icon">
+                        </div>
+                    </div>
+                    <div class="work-card-bottom">
+                        <span class="work-card-tag">website</span>
+                        <a href="#"><h5 class="work-card-title">Photographer</h5></a>
+                    </div>
+                </div>
+                <div class="work-card work-card-medium" data-aos="zoom-in-up">
+                    <div class="work-card-top">
+                        <a href="#">
+                            <img src="./img/work/5.jpeg" class="work-card-cover" alt="">
+                        </a>
+                        <div class="work-card-circle">
+                            <img src="./img/icons/plus-icon.svg" alt="" class="circle-icon">
+                        </div>
+                    </div>
+                    <div class="work-card-bottom">
+                        <span class="work-card-tag">website</span>
+                        <a href="#"><h5 class="work-card-title">Photographer</h5></a>
+                    </div>
+                </div>
+                <div class="work-card work-card-small" data-aos="zoom-in-up">
+                    <div class="work-card-top">
+                        <a href="#">
+                            <img src="./img/work/6.jpeg" class="work-card-cover" alt="">
+                        </a>
+                        <div class="work-card-circle">
+                            <img src="./img/icons/plus-icon.svg" alt="" class="circle-icon">
+                        </div>
+                    </div>
+                    <div class="work-card-bottom">
+                        <span class="work-card-tag">website</span>
+                        <a href="#"><h5 class="work-card-title">Photographer</h5></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
 
     <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
 </body>
 </html>

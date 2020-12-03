@@ -1,69 +1,126 @@
 .container {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 2rem;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 // Text
 
 .text-center {
-    width: 100%;
-    max-width: 80rem;
-    @include absolute;
-    z-index: 5;
-    text-align: center;
+  width: 100%;
+  max-width: 52rem;
+  @include absolute;
+  z-index: 5;
+  text-align: center;
 }
-
+.text {
+  max-width: 52rem;
+  text-align: center;
+  margin: 0 auto;
+}
 .large {
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: .4rem;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
 }
 
 .subheading {
-    font-size: 1.5rem;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 
 .heading {
-    font-size: 3.4rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: .3rem;
+  font-size: 3.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
 }
 
 .text-gray {
-    color: $gray;
-    font-size: 1.4rem;
+  color: $gray;
+  font-size: 1.4rem;
+}
+
+.qoute-text {
+  font-size: 2.2rem;
+  font-weight: 400;
+  //letter-spacing: .2rem;
+}
+
+.s-bg {
+  position: relative;
+  min-height: 40rem;
+
+  &::before {
+    content: "S";
+    font-size: 40rem;
+    color: $white;
+    opacity: 0.08;
+    @include absolute;
+    z-index: 0;
+    padding-bottom: 15rem;
+  }
 }
 
 .bg-parallax {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 0;
-    height: 100%;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  height: 100%;
+  margin: auto;
 }
-
-
 
 .line {
-    display: inline-block;
-    padding-bottom: 1.5rem;
-    position: relative;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+  position: relative;
 
-    &::before {
-        content: '';
-        width: 50%;
-        height: .2rem;
-        background: $main-color;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
+  &::before {
+    content: "";
+    width: 50%;
+    height: 0.2rem;
+    background: $main-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-center::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
+@include media("tablet") {
+  .large {
+    font-size: 5.2rem;
+  }
+  .heading {
+    font-size: 3.8rem;
+  }
+  .subheading {
+    font-size: 1.5rem;
+  }
+  .text-gray {
+    font-size: 1.8rem;
+  }
+}
+@include media("pc") {
+  .large {
+    font-size: 5.8rem;
+  }
+  .heading {
+    font-size: 5rem;
+  }
+  .subheading {
+    font-size: 1.6rem;
+  }
+  .text-gray {
+    font-size: 1.8rem;
+  }
+}

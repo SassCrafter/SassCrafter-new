@@ -9,6 +9,23 @@ mobileToggler.addEventListener('click', function() {
 })
 
 
+// Change nav on scroll
+let scrollpos = window.scrollY;
+const header = document.querySelector(".header");
+const header_height = header.offsetHeight;
+
+const add_class_on_scroll = () => header.classList.add('header-scrolled');
+const remove_class_on_scroll = () => header.classList.remove("header-scrolled");
+
+window.addEventListener('scroll', function() { 
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= header_height) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+});
+
+
 
 // Change nav overlay img on hover
 const navLinks = document.querySelectorAll('.nav a');
@@ -43,6 +60,13 @@ navLinks.forEach(el => {
         });
         active1.classList.add('active');
     })
+
+    el.addEventListener('click', () => {
+        el.classList.add('active')
+        mobileToggler.classList.remove('active');
+        nav.classList.remove('active');
+    })
+    
 })
 
 

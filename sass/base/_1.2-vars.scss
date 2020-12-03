@@ -8,12 +8,14 @@ $main-color: #ff7b3e;
 $font-stack: 'Roboto', Arial, Helvetica, sans-serif;
 $font-stack-2: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 
-$max-width: 1400px;
-$header-height: 60px;
+$max-width: 1600px;
+$header-height: 80px;
 
 
 $t-time: 250ms;
+$t-timing: ease-in-out;
 
 $tablet: 768px;
 $laptop: 900px;
 $pc: 1200px;
+$large: 1400px;
